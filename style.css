@@ -1,0 +1,198 @@
+*{
+    
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+/* ============================================
+   NAVIGATION BAR — Mobile First
+   Default (mobile): vertical stack
+   ============================================ */
+.navbar {
+  display: flex;
+  flex-direction: column;   /* vertical on mobile */
+  background-color: #222;
+  padding: 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  background-color: #444;
+  border-radius: 4px;
+}
+
+/* Desktop: horizontal row with gap */
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;    /* horizontal on desktop */
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+
+/* ============================================
+   HEADING
+   ============================================ */
+h1 {
+  margin: 30px 0 20px;
+  font-size: 2rem;
+  color: #111;
+}
+
+
+/* ============================================
+   IMAGE — rounded edges
+   Roll number EVEN  → 50px border-radius
+   Roll number ODD   → 20px border-radius
+   Change the value below to match yours!
+   ============================================ */
+.rounded-img {
+  display: block;
+  max-width: 100%;
+  border-radius: 20px;   /* Change to 20px if roll number is ODD */
+  margin-bottom: 30px;
+}
+
+
+/* ============================================
+   VIDEO
+   Width = 50% of device/viewport width (50vw)
+   Same background color as button (green)
+   ============================================ */
+.my-video {
+  display: block;
+  width: 50vw;                     /* half the device width */
+  padding: 10px;                   /* padding for video */
+  background-color:blue;       /* green — change if needed */
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+
+/* ============================================
+   TABLE
+   3 rows × 3 columns
+   Row number headings (1, 2, 3) are styled bold
+   ============================================ */
+.my-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.my-table th,
+.my-table td {
+  border: 1px solid #ccc;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+/* Header row at top */
+.my-table thead th {
+  background-color:lightblue;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Row number headings (1, 2, 3) in tbody */
+.my-table tbody th {
+  background-color: #555;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  width: 50px;
+}
+
+/* Alternate row color for readability */
+.my-table tbody tr:nth-child(even) td {
+  background-color: #f0f0f0;
+}
+
+
+/* ============================================
+   BUTTON
+   - No border
+   - Padding
+   - Hover effect
+   - Same background color as video (green)
+   - Margin for button
+   ============================================ */
+.my-button {
+  border: none;                    /* no border */
+  padding: 12px 28px;              /* padding */
+  margin: 10px 0 30px;             /* margin for button */
+  background-color:blue;       /* green — change if needed */
+  color: white;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect */
+.my-button:hover {
+  background-color: blue;       /* darker green on hover */
+  transform: scale(1.05);          /* slight grow effect */
+}
+
+
+/* ============================================
+   GRID — Desktop First
+   Desktop (default): 4 columns per row
+   Mobile: 2 columns per row
+   ============================================ */
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);   /* 4 items per row on desktop */
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.grid-item {
+  background-color: lightblue;       /* same green theme */
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  border-radius: 8px;
+}
+
+/* Mobile: 2 columns per row */
+@media (max-width: 767px) {
+  .grid-section {
+    grid-template-columns: repeat(2, 1fr);   /* 2 items per row on mobile */
+  }
+}
+
+
+/* ============================================
+   COLOR GUIDE — Change based on roll number
+   Roll ends 0–3  →  Blue:   #2196f3 / hover #1565c0
+   Roll ends 4–6  →  Green:  #4caf50 / hover #388e3c   ← current
+   Roll ends 7–9  →  Purple: #9c27b0 / hover #6a1b9a
+
+   To change: Find all instances of #4caf50 and replace
+   with the color matching YOUR roll number.
+   ============================================ */
+   
